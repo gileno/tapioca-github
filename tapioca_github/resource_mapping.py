@@ -72,10 +72,10 @@ RESOURCE_MAPPING = {
     },
     'events_user_public': {
         'resource': 'users/{username}/events/public',
-        'https://developer.github.com/v3/activity/events/#list-public-events-performed-by-a-user'
+        'doc': 'https://developer.github.com/v3/activity/events/#list-public-events-performed-by-a-user'
     },
     'events_user_organization': {
         'resource': 'users/{username}/events/orgs/{org}',
         'doc': 'https://developer.github.com/v3/activity/events/#list-events-for-an-organization'
-    }
+    },
 }

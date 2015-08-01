@@ -21,11 +21,8 @@ except (IOError, ImportError):
 package = 'tapioca_github'
 requirements = [
     'tapioca-wrapper==0.4.1',
-    'requests-oauthlib==0.4.2',
 ]
-test_requirements = [
 
-]
 
 def get_version(package):
     """
@@ -70,4 +67,5 @@ setup(
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.7',
     ],
+    test_suite='tests',
 )
