@@ -27,9 +27,9 @@ class GithubClientAdapter(TapiocaAdapter):
         return response_data
 
     def get_iterator_next_request_kwargs(self, iterator_request_kwargs,
-        response_data, raw_response):
-        if "Link" in raw_response.headers:
-            links = raw_response.headers["Link"].split(", ")
+        data, response):
+        if "Link" in response.headers:
+            links = response.headers["Link"].split(", ")
             for link in links:
                 (url, rel) = link.split("; ")
                 url = url[1:-1]

@@ -38,5 +38,4 @@ RESOURCE_MAPPING = {
         'resource': 'gists/{id}/forks',
         'doc': 'https://developer.github.com/v3/gists/#fork-a-gist'
     },
-    
 }
