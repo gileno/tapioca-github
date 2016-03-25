@@ -12,7 +12,15 @@ from tapioca_github import Github
 api = Github(access_token='{access-token}')
 ```
 
-No more documentation needed.
+### Serialization
+- datetime
+- Decimal
+
+### Deseralization
+- datetime
+- Decimal
+
+## More
 
 - Learn how Tapioca works [here](http://tapioca-wrapper.readthedocs.org/en/stable/quickstart.html)
 - Explore this package using iPython
