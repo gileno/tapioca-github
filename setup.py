@@ -20,7 +20,7 @@ except (IOError, ImportError):
 
 package = 'tapioca_github'
 requirements = [
-    'tapioca-wrapper==0.4.1',
+    'tapioca-wrapper<2',
 ]
 
 
@@ -36,9 +36,9 @@ def get_version(package):
 if sys.argv[-1] == 'publish':
     os.system("python setup.py sdist upload")
     args = {'version': get_version(package)}
-    print "You probably want to also tag the version now:"
-    print "  git tag -a %(version)s -m 'version %(version)s'" % args
-    print "  git push --tags"
+    print("You probably want to also tag the version now:")
+    print("  git tag -a %(version)s -m 'version %(version)s'" % args)
+    print("  git push --tags")
     sys.exit()
 
 
@@ -60,12 +60,12 @@ setup(
     zip_safe=False,
     keywords='tapioca-github',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        "Programming Language :: Python :: 2",
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
     ],
     test_suite='tests',
 )

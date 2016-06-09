@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from tapioca import TapiocaAdapter, generate_wrapper_from_adapter
+from tapioca import (
+    TapiocaAdapter, generate_wrapper_from_adapter, JSONAdapterMixin)
 from requests_oauthlib import OAuth2
 
 from resource_mapping import RESOURCE_MAPPING
 
 
-class GithubClientAdapter(TapiocaAdapter):
-
+class GithubClientAdapter(JSONAdapterMixin, TapiocaAdapter):
     api_root = 'https://api.github.com/'
     resource_mapping = RESOURCE_MAPPING
 
@@ -20,14 +20,11 @@ class GithubClientAdapter(TapiocaAdapter):
             ),
         }
 
-    def response_to_native(self, response):
-        return response.json()
-
     def get_iterator_list(self, response_data):
         return response_data
 
-    def get_iterator_next_request_kwargs(self, iterator_request_kwargs,
-        data, response):
+    def get_iterator_next_request_kwargs(self,
+            iterator_request_kwargs, response_data, response):
         if "Link" in response.headers:
             links = response.headers["Link"].split(", ")
             for link in links:
