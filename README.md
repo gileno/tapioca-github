@@ -6,6 +6,11 @@ A Pythonic GitHub API v3 wrapper. Powered by [Tapioca-Wrapper](https://github.co
 pip install tapioca-github
 ```
 
+## Tests
+```
+python setup.py test
+```
+
 ## Documentation
 ``` python
 from tapioca_github import Github
