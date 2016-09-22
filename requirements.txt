@@ -1,1 +1,2 @@
-tapioca-wrapper>=0.4.1
+tapioca-wrapper<2
+requests-oauthlib

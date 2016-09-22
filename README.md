@@ -1,4 +1,5 @@
 # Tapioca Github
+A Pythonic GitHub API v3 wrapper. Powered by [Tapioca-Wrapper](https://github.com/vintasoftware/tapioca-wrapper).
 
 ## Instalation
 ```

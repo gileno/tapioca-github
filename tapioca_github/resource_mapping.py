@@ -1,4 +1,5 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
+# flake8: noqa
 
 RESOURCE_MAPPING = {
     'gists_user': {
@@ -23,8 +24,7 @@ RESOURCE_MAPPING = {
     },
     'gists_single_revision': {
         'resource': 'gists/{id}/{sha}',
-        'doc': 'https://developer.github.com/v3/gists/' \
-               '#get-a-specific-revision-of-a-gist'
+        'doc': 'https://developer.github.com/v3/gists/#get-a-specific-revision-of-a-gist'
     },
     'gists_single_commits': {
         'resource': 'gists/{id}/commits',
@@ -78,4 +78,36 @@ RESOURCE_MAPPING = {
         'resource': 'users/{username}/events/orgs/{org}',
         'doc': 'https://developer.github.com/v3/activity/events/#list-events-for-an-organization'
     },
+    'repo_single': {
+        'resource': '/repos/{owner}/{repo}',
+        'doc': 'https://developer.github.com/v3/repos/#get'
+    },
+    'repo_issues': {
+        'resource': 'repos/{owner}/{repo}/issues',
+        'doc': 'https://developer.github.com/v3/issues/#list-issues-for-a-repository'
+    },
+    'issue_single': {
+        'resource': 'repos/{owner}/{repo}/issues/{number}',
+        'doc': 'https://developer.github.com/v3/issues/#get-a-single-issue'
+    },
+    'issue_comments': {
+        'resource': 'repos/{owner}/{repo}/issues/{number}/comments',
+        'doc': 'https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue'
+    },
+    'issue_comment_single': {
+        'resource': 'repos/{owner}/{repo}/issues/comments/{id}',
+        'doc': 'https://developer.github.com/v3/issues/comments/#get-a-single-comment'
+    },
+    'user_repos': {
+        'resource': 'user/repos',
+        'doc': 'https://developer.github.com/v3/repos/#list-your-repositories'
+    },
+    'webhooks': {
+        'resource': 'repos/{owner}/{repo}/hooks',
+        'doc': 'https://developer.github.com/v3/repos/hooks/#list-hooks'
+    },
+    'is_collaborator': {
+        'resource': 'repos/{owner}/{repo}/collaborators/{username}',
+        'doc': 'https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator'
+    }
 }
