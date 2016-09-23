@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+# flake8: noqa
 
 try:
     from setuptools import setup
@@ -21,6 +21,10 @@ except (IOError, ImportError):
 package = 'tapioca_github'
 requirements = [
     'tapioca-wrapper<2',
+    'requests-oauthlib',
+]
+tests_require = [
+    'responses',
 ]
 
 
@@ -55,6 +59,7 @@ setup(
     ],
     package_dir={'tapioca_github': 'tapioca_github'},
     include_package_data=True,
+    tests_require=tests_require,
     install_requires=requirements,
     license="MIT",
     zip_safe=False,
