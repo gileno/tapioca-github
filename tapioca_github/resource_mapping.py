@@ -79,7 +79,7 @@ RESOURCE_MAPPING = {
         'doc': 'https://developer.github.com/v3/activity/events/#list-events-for-an-organization'
     },
     'repo_single': {
-        'resource': '/repos/{owner}/{repo}',
+        'resource': 'repos/{owner}/{repo}',
         'doc': 'https://developer.github.com/v3/repos/#get'
     },
     'repo_issues': {
