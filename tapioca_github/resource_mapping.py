@@ -111,11 +111,11 @@ RESOURCE_MAPPING = {
         'doc': 'https://developer.github.com/v3/repos/collaborators/#check-if-a-user-is-a-collaborator'
     },
     'commits_repository': {
-        'resource': '/repos/{owner}/{repo}/commits',
+        'resource': 'repos/{owner}/{repo}/commits',
         'doc': 'https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository'
     },
     'commit_repository': {
-        'resource': '/repos/{owner}/{repo}/commits/{sha}',
+        'resource': 'repos/{owner}/{repo}/commits/{sha}',
         'doc': 'https://developer.github.com/v3/repos/commits/#get-a-single-commit'
     }
 }
