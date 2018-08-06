@@ -3,7 +3,7 @@
 
 __author__ = 'Gileno Filho'
 __email__ = 'contato@gilenofilho.com.br'
-__version__ = '0.3'
+__version__ = '0.4'
 
 
 from .tapioca_github import Github
